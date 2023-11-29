@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+
+$main-font: "Noto Sans", sans-serif;
+$secondary-font: "Roboto", sans-serif;
+$main-color: rgb(100, 18, 109);
+$secondary-color: rgb(208, 126, 217);
+$contrast-color: rgb(226, 218, 175);
+
+%d-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+%d-flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+%spacing {
+	margin-inline: 20px;
+	padding: 20px;
+}
+
+%btn-generic {
+	background-color: $main-color;
+	// color: lighten($color: $main-color, $amount: 90%);
+	color: $contrast-color;
+	padding: 1rem;
+	border-radius: 30px;
+	border: none;
+}
+%hoverTeal {
+	background-color: teal;
+}
+header {
+	@extend %d-flex;
+	background-color: $secondary-color;
+	padding: 20px;
+
+	img {
+		height: 50px;
+	}
+
+	nav {
+		li {
+			@extend %spacing, %btn-generic;
+			display: inline-block;
+		}
+	}
+}
+
+body {
+	font-family: $main-font;
+}
+
+#hero {
+	@extend %spacing, %d-flex;
+	margin-block: 20px;
+	background-color: $main-color;
+	justify-content: space-evenly;
+	h1 {
+		@extend %spacing;
+		font-size: 3rem;
+		color: $secondary-color;
+	}
+	p {
+		@extend %spacing;
+		font-size: 1.5rem;
+		color: $secondary-color;
+	}
+	button {
+		@extend %btn-generic, %spacing;
+		width: 200px;
+		background-color: $secondary-color;
+		font-size: 1.5rem;
+
+		&:hover {
+			@extend %hoverTeal;
+		}
+	}
+	img {
+		border-radius: 50px;
+	}
+}
