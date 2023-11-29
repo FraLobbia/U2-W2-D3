@@ -39,7 +39,7 @@ body {
 
 #hero {
   margin-block: 20px;
-  background-color: rgb(100, 18, 109);
+  background-color: #640fc5;
   justify-content: space-evenly;
 }
 #hero h1 {
@@ -52,8 +52,16 @@ body {
 }
 #hero button {
   width: 200px;
-  background-color: rgb(208, 126, 217);
   font-size: 1.5rem;
+}
+#hero button:nth-of-type(1) {
+  background-color: #0e6cff;
+}
+#hero button:nth-of-type(2) {
+  background-color: #ff8700;
+}
+#hero button:nth-of-type(3) {
+  background-color: #4caf50;
 }
 #hero img {
   border-radius: 50px;
