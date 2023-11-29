@@ -1,0 +1,22 @@
+$buttonColors: (
+	primary: $button1-bg,
+	secondary: $button2-bg,
+	tertiary: $button3-bg,
+);
+
+@each $name, $value in $buttonColors {
+	.button-#{$name} {
+		@extend %btn-generic, %spacing;
+		width: 200px;
+		font-size: 1.5rem;
+		background-color: $value;
+		@include floating(
+			20px,
+			15px 15px 15px scale-color($value, $blackness: 35%),
+			2px solid scale-color($value, $blackness: 55%)
+		);
+		&:hover {
+			background-color: scale-color($value, $blackness: 35%);
+		}
+	}
+}

@@ -5,12 +5,12 @@
   align-items: center;
 }
 
-#hero button, #hero p, #hero h1, #hero, header nav li {
+#hero p, #hero h1, #hero, header nav li, .button-tertiary, .button-secondary, .button-primary {
   margin-inline: 20px;
   padding: 20px;
 }
 
-#hero button, header nav li {
+header nav li, .button-tertiary, .button-secondary, .button-primary {
   background-color: rgb(100, 18, 109);
   color: rgb(226, 218, 175);
   padding: 1rem;
@@ -18,8 +18,40 @@
   border: none;
 }
 
-#hero button:hover {
-  background-color: teal;
+.button-primary {
+  width: 200px;
+  font-size: 1.5rem;
+  background-color: #0e6cff;
+  border-radius: 20px;
+  border: 2px solid #0e3573;
+  box-shadow: 15px 15px 15px #0e49a6;
+}
+.button-primary:hover {
+  background-color: #0e49a6;
+}
+
+.button-secondary {
+  width: 200px;
+  font-size: 1.5rem;
+  background-color: #ff8700;
+  border-radius: 20px;
+  border: 2px solid #733d00;
+  box-shadow: 15px 15px 15px #a65800;
+}
+.button-secondary:hover {
+  background-color: #a65800;
+}
+
+.button-tertiary {
+  width: 200px;
+  font-size: 1.5rem;
+  background-color: #4caf50;
+  border-radius: 20px;
+  border: 2px solid #4c4f4c;
+  box-shadow: 15px 15px 15px #4c724e;
+}
+.button-tertiary:hover {
+  background-color: #4c724e;
 }
 
 header {
@@ -50,19 +82,8 @@ body {
   font-size: 1.5rem;
   color: rgb(208, 126, 217);
 }
-#hero button {
-  width: 200px;
-  font-size: 1.5rem;
-}
-#hero button:nth-of-type(1) {
-  background-color: #0e6cff;
-}
-#hero button:nth-of-type(2) {
-  background-color: #ff8700;
-}
-#hero button:nth-of-type(3) {
-  background-color: #4caf50;
-}
 #hero img {
-  border-radius: 50px;
+  border-radius: 60px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px red;
 }/*# sourceMappingURL=style.css.map */

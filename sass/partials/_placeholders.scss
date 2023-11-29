@@ -1,0 +1,27 @@
+%d-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+%d-flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+%spacing {
+	margin-inline: 20px;
+	padding: 20px;
+}
+
+%btn-generic {
+	background-color: $main-color;
+	// color: lighten($color: $main-color, $amount: 90%);
+	color: $contrast-color;
+	padding: 1rem;
+	border-radius: 30px;
+	border: none;
+}
+%hoverTeal {
+	background-color: teal;
+}

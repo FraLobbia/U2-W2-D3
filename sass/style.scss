@@ -1,33 +1,9 @@
 @import "partials/color";
+@import "partials/placeholders";
 @import "partials/text";
+@import "partials/mixins";
+@import "partials/buttons";
 
-%d-flex {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-%d-flex-column {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-
-%spacing {
-	margin-inline: 20px;
-	padding: 20px;
-}
-
-%btn-generic {
-	background-color: $main-color;
-	// color: lighten($color: $main-color, $amount: 90%);
-	color: $contrast-color;
-	padding: 1rem;
-	border-radius: 30px;
-	border: none;
-}
-%hoverTeal {
-	background-color: teal;
-}
 header {
 	@extend %d-flex;
 	background-color: $secondary-color;
@@ -64,26 +40,9 @@ body {
 		font-size: 1.5rem;
 		color: $secondary-color;
 	}
-	button {
-		@extend %btn-generic, %spacing;
-		width: 200px;
-		font-size: 1.5rem;
 
-		&:hover {
-			@extend %hoverTeal;
-		}
-
-		&:nth-of-type(1) {
-			background-color: $button1-bg;
-		}
-		&:nth-of-type(2) {
-			background-color: $button2-bg;
-		}
-		&:nth-of-type(3) {
-			background-color: $button3-bg;
-		}
-	}
 	img {
-		border-radius: 50px;
+		// border-radius: 50px;
+		@include floating();
 	}
 }
